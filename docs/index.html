@@ -1,7 +1,15 @@
 <!doctype html>
 <html>
-<head>
-<script>
+    <head>
+
+</head>
+    <body>
+
+</body>
+</html>
+<html>
+    <head>
+        <script>
 function add(){
 var a,b,c;
 a=Number(document.getElementById("first").value);
@@ -10,11 +18,376 @@ c= a + b;
 document.getElementById("answer").value= c;
 }
 </script>
-</head>
-<body>
-Enter the First number : <input id="first">
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+            <style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c3{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#d9ead3;border-left-style:solid;border-bottom-width:1pt;width:451.4pt;border-top-color:#000000;border-bottom-style:solid}.c9{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:13pt;font-family:"Arial";font-style:normal}.c1{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c6{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Arial";font-style:normal}.c0{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c5{border-spacing:0;border-collapse:collapse;margin-right:auto}.c8{background-color:#ffffff;max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.c7{font-size:14pt;font-weight:700}.c2{height:11pt}.c4{height:0pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style>
+        </head>
+        <body class="c8">
+            <p class="c0">
+                <span class="c6">Create a Kafka topic</span>
+            </p>
+            <a id="t.2053ad8ede0223be0d09273dda26044181c66ea9"/>
+            <a id="t.0"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/bin/kafka-topics.sh --zookeeper $ZK_HOSTS --create --topic $TOPIC_NAME --partitions 3 --replication-factor 3</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Create a Kafka topic in case the topic doesn&rsquo;t exist</span>
+            </p>
+            <a id="t.b41bc91f3c6b33a20f5d6128264b8bb636cd5b13"/>
+            <a id="t.1"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/bin/kafka-topics.sh --zookeeper $ZK_HOSTS --create --topic $TOPIC_NAME --partitions 3 --replication-factor 3 --if-not-exists</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">List Kafka topics</span>
+            </p>
+            <a id="t.d13ee1217326c6f848aa56dff49d684f4c34b320"/>
+            <a id="t.2"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/bin/kafka-topics.sh --zookeeper $ZK_HOSTS --list</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c9">List Kafka topics and exclude internal topics</span>
+            </p>
+            <a id="t.1a25e4519ea736ef28f2ae394a3b691379279fc7"/>
+            <a id="t.3"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/bin/kafka-topics.sh --zookeeper $ZK_HOSTS --list --exclude-internal</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Show the Kafka topic details</span>
+            </p>
+            <a id="t.bc7e0160ae093bcdf4e06dad73d28014867ba37f"/>
+            <a id="t.4"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/bin/kafka-topics.sh --zookeeper $ZK_HOSTS --topic $TOPIC_NAME --describe</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Increase the number of partitions of a Kafka topic</span>
+            </p>
+            <a id="t.e7fc45783bc285a5c2c4d65223cd59b377256fa5"/>
+            <a id="t.5"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/bin/kafka-topics.sh --zookeeper $ZK_HOSTS --alter --topic my-first-topic --partitions 5</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c7">Change the retention time of a Kafka topic</span>
+            </p>
+            <a id="t.d4a7e1f330c4e15e1dbb9ad32f6423cad13f3153"/>
+            <a id="t.6"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span class="c1">$KAFKA_HOME/bin/kafka-configs.sh --zookeeper $ZK_HOSTS --alter --entity-type topics --entity-name my-first-topic --add-config retention.ms=259200000</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <a id="t.389bec8c308a23c6178bb2f2a97466a727c48ebf"/>
+            <a id="t.7"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span class="c1">$KAFKA_HOME/bin/kafka-topics.sh --zookeeper $ZK_HOSTS --alter --entity-type topics --entity-name my-first-topic --delete-config retention.ms</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Delete a Kafka topic</span>
+            </p>
+            <a id="t.ef25abb3ff7701ef808360e91ef420dd971f495e"/>
+            <a id="t.8"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/bin/kafka-topics.sh &mdash; zookeeper $ZK_HOSTS --delete --topic $TOPIC_NAME</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Produce a message to a Kafka topic</span>
+            </p>
+            <a id="t.061069602bb623392c3cb81b48797d1ae5220fc7"/>
+            <a id="t.9"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/usr/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic $TOPIC_NAME</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Produce messages to a Kafka topic from a file</span>
+            </p>
+            <a id="t.f47d2e994900a927831c11c650eba3b787f5f3fe"/>
+            <a id="t.10"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-first-topic &lt; topic-input.txt</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Produce messages to Kafka with both key and value</span>
+            </p>
+            <a id="t.a9d48009b4e7fe38d1627ea268f8bcb8db07d9bb"/>
+            <a id="t.11"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/usr/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic $TOPIC_NAME --property parse.key=true --property key.separator=:</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Consume a Kafka topic</span>
+            </p>
+            <a id="t.405a4ba95d33f8b97382077ac7503b7b4d248777"/>
+            <a id="t.12"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic $TOPIC_NAME</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Consume a Kafka topic and show both key and value</span>
+            </p>
+            <a id="t.f75e82a05c34f35d64c80abfc5a090e968bd9ebb"/>
+            <a id="t.13"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic some-topic --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Consume a Kafka topic from the beginning</span>
+            </p>
+            <a id="t.042cc2db594fbaf6b9895b64ccfcd3854d3fb0cf"/>
+            <a id="t.14"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>$KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-first-topic --from-beginning</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Get the earliest offset still in a topic</span>
+            </p>
+            <a id="t.ea57d00826243f50891eeffd500d02c88a90021d"/>
+            <a id="t.15"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic mytopic --time -2</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Get the latest offset still in a topic</span>
+            </p>
+            <a id="t.3072be9cb3a1471b29db6a8f25f889c0476db163"/>
+            <a id="t.16"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic mytopic --time -1</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">Kafka Consumer Groups</span>
+            </p>
+            <a id="t.fc09afd08f1ee7b6762ed9b49312ace9a99dfa8e"/>
+            <a id="t.17"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>bin/kafka-consumer-groups.sh --new-consumer --bootstrap-server localhost:9092 --list</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            <p class="c0">
+                <span class="c6">View the details of a consumer group</span>
+            </p>
+            <a id="t.9707da7a7482007db9a06de17932d54a5d2dd87d"/>
+            <a id="t.18"/>
+            <table class="c5">
+                <tbody>
+                    <tr class="c4">
+                        <td class="c3" colspan="1" rowspan="1">
+                            <p class="c0">
+                                <span>bin/kafka-consumer-groups.sh --zookeeper localhost:2181 --describe --group &lt;group name&gt;</span>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="c0 c2">
+                <span class="c1"/>
+            </p>
+            
+            
+            Enter the First number : <input id="first">
 Enter the Second number: <input id="second">
-<button onclick="add()">Add</button>
-<input id="answer">
-</body>
-</html>
+                    <button onclick="add()">Add</button>
+                    <input id="answer">
+        </body>
+                </html>
